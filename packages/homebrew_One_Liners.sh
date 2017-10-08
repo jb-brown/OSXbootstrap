@@ -12,6 +12,7 @@ declare -a pkgs=(	git
 									wget
 									terraform
 									jq
+									python3
 								)
 
 for pkg in "${pkgs[@]}"; do
