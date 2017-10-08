@@ -3,3 +3,5 @@
 
 # IntelliJ & related Jetbrains .idea settings directory.
 .idea
+awscli
+get-pip.py
