@@ -13,6 +13,8 @@ declare -a pkgs=(	git
 									terraform
 									jq
 									python3
+									certbot
+									docker
 								)
 
 for pkg in "${pkgs[@]}"; do
