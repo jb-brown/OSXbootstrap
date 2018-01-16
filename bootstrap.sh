@@ -126,7 +126,7 @@ function bootstrap(){
 
 	local codeDir="$HOME/Code"
 	mkdir -p $codeDir
-	local gitDir=$(clone_repo $codeDir "PelotonTechIO/OSXBootstrap")
+	local gitDir=$(clone_repo $codeDir "jb-brown/OSXBootstrap")
 
 	if $doPkgs ; then
 		source_files "${gitDir}/packages"
