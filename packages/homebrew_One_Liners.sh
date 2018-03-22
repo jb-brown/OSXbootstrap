@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Homebrew packages that have no aditional configuration                      #
+# Homebrew packages                      #
 ###############################################################################
 
 doUpgrade=false;
@@ -12,9 +12,13 @@ declare -a pkgs=(	git
 									wget
 									terraform
 									jq
+									python
 									python3
 									certbot
-									docker
+									opencv3 --with-contrib --with-python3 --3.2.0
+									git-lfs
+									thefuck
+									awscli
 								)
 
 for pkg in "${pkgs[@]}"; do
@@ -26,20 +30,20 @@ for pkg in "${pkgs[@]}"; do
 done
 
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
+
 #Install casks if they aren't already
-declare -a casks=(	insync				#mount & sync multiple google drive accounts
-										google-drive
+declare -a casks=(	google-drive
 										slack
 										zoomus				#video conference
 										skype
-										twitterrific
 										caffeine
 										dropbox
-										1password
-										lastpass
-										screenhero		#remote pair programming
 										macdown				#mark down editor
 										intellij-idea #java ide
+										paralells
+										google-chrome
+										docker
 
 									)
 
