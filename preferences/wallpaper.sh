@@ -20,4 +20,4 @@ END
 
 
 #Change login screen background
-sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture "$dir/login.png"
+sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture "$dir/wallpaper.png"
