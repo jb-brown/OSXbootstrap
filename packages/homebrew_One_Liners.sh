@@ -33,7 +33,7 @@ done
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 
 #Install casks if they aren't already
-declare -a casks=(	google-drive
+declare -a casks=(	google-drive-file-stream
 										slack
 										zoomus				#video conference
 										skype
