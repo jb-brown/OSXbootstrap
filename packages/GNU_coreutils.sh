@@ -4,7 +4,7 @@
 # install GNU core utilities (those that come with macOS are outdated).
 
 if brew list -1 | grep -q "^coreutils\$"; then
-	brew update coreutils
+	brew upgrade coreutils
 else
 	brew install coreutils
 fi

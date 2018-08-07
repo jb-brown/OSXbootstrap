@@ -25,7 +25,7 @@ declare -a pkgs=(	git
 
 for pkg in "${pkgs[@]}"; do
     if brew list -1 | grep -q "^${pkg}\$"; then
-			doUpgrade=true;
+			brew upgrade $pkg
 		else
 			brew install $pkg
     fi
@@ -51,13 +51,8 @@ declare -a casks=(	google-drive-file-stream
 
 for cask in "${casks[@]}"; do
     if brew cask list -1 | grep -q "^${cask}\$"; then
-			doUpgrade=true;
+			brew cask upgrade $cask
 		else
 			brew cask install $cask
     fi
 done
-
-#Update any of the packages or casks that were previously installed
-if [ doUpgrade ]; then
-	brew upgrade
-fi

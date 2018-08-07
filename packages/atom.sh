@@ -7,7 +7,7 @@
 
 #install or update atom
 if brew cask list -1 | grep -q "^atom\$"; then
-	brew cask update atom
+	brew cask updgrade atom
 else
 	brew cask install atom
 fi

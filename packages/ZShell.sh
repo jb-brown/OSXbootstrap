@@ -7,13 +7,13 @@
 #Install and configure zsh & completions
 
 if brew list -1 | grep -q "^zsh\$"; then
-	brew update zsh
+	brew upgrade zsh
 else
 	brew install zsh
 fi
 
 if brew list -1 | grep -q "^zsh-completions\$"; then
-	brew update zsh-completions
+	brew upgrade zsh-completions
 else
 	brew install zsh-completions
 	touch ~/.zshrc
