@@ -19,6 +19,8 @@ declare -a pkgs=(	git
 									git-lfs
 									thefuck
 									awscli
+									yarn
+									geckodriver
 								)
 
 for pkg in "${pkgs[@]}"; do
@@ -44,7 +46,7 @@ declare -a casks=(	google-drive-file-stream
 										paralells
 										google-chrome
 										docker
-
+										firefox
 									)
 
 for cask in "${casks[@]}"; do
