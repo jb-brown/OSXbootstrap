@@ -38,20 +38,19 @@ defaults write  com.apple.finder SidebarPlacesSectionDisclosedState -int 1
 
 #add favorites in order from most specific to least
 #Code
-/usr/bin/sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///Users/$loggedInUser/Code && sleep 2
-
-#home directory
-/usr/bin/sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///Users/$loggedInUser && sleep 2
+/usr/local/bin/mysides add "Code" file:///Users/$loggedInUser/Code/ && sleep 2
 
 #Desktop
-/usr/bin/sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///Users/$loggedInUser/Desktop && sleep 2
+/usr/local/bin/mysides add "Destkop" file:///Users/$loggedInUser/Desktop && sleep 2
 
 #Applications
-/usr/bin/sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:///Applications && sleep 2
+/usr/local/bin/mysides add "Applications" file:///Users/$loggedInUser/Applications && sleep 2
 
+#home directory
+/usr/local/bin/mysides add $loggedInUser file:///Users/$loggedInUser/ && sleep 2
 
 #ROOT
-/usr/bin/sfltool add-item com.apple.LSSharedFileList.FavoriteItems file:/// && sleep 2
+/usr/local/bin/mysides add "Macintosh HD" file:/// && sleep 2
 
 
 touch /Users/$loggedInUser/.sidebarshortcuts
